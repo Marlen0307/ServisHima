@@ -1,0 +1,452 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; /*Ben qe te kene te perfshihet border dhe padding ne gjatesine dhe gjeresine e elementit. Nqs nuk e ve border-box dhe deklaron padding ose border atehere madhesia e elementit do te dali jashte pritshmerise */
+}
+nav{
+    size: 100%;
+    display: flex;
+    justify-content: space-around; /* Jep hapsir mes elemmenteve */
+    min-height: 8vh; /* 8% e gjith hapsires */
+    font-family: 'Poppins', sans-serif; /* Duhet t kerkosh ndonje font me te lezetshem per nav po kjo esht sa per momentin */
+    background-color: #069ca1;
+}
+.nav-links{
+    font-size: 17px;
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+    width: 50%; /* I jep 50% te navit dhe i jep hapsir midis elementeve te ul */
+    list-style-type: none;
+    letter-spacing: 2px;
+   
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+.logo h4 {
+    position: absolute;
+    top: 130px;
+    left: 70px;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 15px;
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+.burger{
+    margin-top: 60px;
+    display: none;
+}
+.burger div {
+    height: 5px;
+    width: 35px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+/*Fund Navigatori*/
+/*Foto e fillimit dhe slogani */
+div.title{
+    height: 700px;
+    background-image: url(./foto/lavatricet.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+/*
+.title div{
+    display: grid;
+    grid-template-rows: 400px;
+    align-self: center;
+    align-content: flex-start;
+}
+.title div h1{
+    font-size: 70px;
+    font-weight: bolder;
+    color: white;
+}*/
+
+.title div{
+    position: absolute;
+    left: 550px;
+    top: 130px;
+    display: flex;
+    flex-direction: column;
+    height: 700px;
+    width: 600px;
+    justify-content: space-around;
+    align-self: flex-start;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    animation: text 2s;
+}
+.title div h1{
+    font-size: 80px;
+    font-weight:bolder;
+    text-align: center;
+}
+.title div h2{
+    font-size: 30px;
+    font-weight: 1000;
+    text-align: center;
+    margin-left: 200px;
+    padding-bottom: 50px;
+}
+@keyframes text{
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(0);
+
+    }
+}
+/*Fundi i fotos se fillimit dhe sloganit*/
+/*Fillimi i about*/
+div#PershkrimSherbim{
+    display: flex;
+    justify-content: space-around;
+}
+.about{
+    width: 40%;
+    border: 3px grey dotted;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    font-family: Georgia,'Times New Roman',Times, serif;
+    font-size: 20px ;
+    font-weight: 600 ;
+    font-style: italic;
+    line-height: 1.9em;
+    background-color:#a7cece ;
+    border: 2px black dotted ;
+    letter-spacing: 1px;
+}
+.about h2{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+#Riparimet{
+    border: thin grey dotted;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 30px;
+    width: 550px;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+#Riparimet #RiparimLavatrice img, #Riparimet #RiparimFrigoriferi img, #Riparimet #RiparimLavastovilie img{
+    width: 50%;
+    border-radius: 50%;
+}
+#Riparimet #RiparimLavatrice,#Riparimet #RiparimFrigoriferi,#Riparimet #RiparimLavastovilie{
+    text-align: center;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: 2px;
+    margin: 20px;
+}
+#Riparimet #RiparimLavatrice h3,#Riparimet #RiparimFrigoriferi h3,#Riparimet #RiparimLavastovilie h3{
+    color:aquamarine;
+}
+/*Fundi i about */
+/*Fillimi i cilesive */
+div.pyetje{
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    color: grey;
+    display: grid;
+    grid-template-columns: 90%;
+    margin: 60px;
+    margin-bottom: 20px;
+    width: 90%;
+    align-items: center;
+    text-align: center;
+}
+div#cilesiteTona{
+    width: 90%;
+    margin: 50px;
+    margin-top: 0px;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-gap: 1em;
+}
+div#cilesiteTona div{
+    font-family: 'Poppins', sans-serif;
+    background-color:#D3D3D3 ;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    text-align: center; 
+}
+div#cilesiteTona div h2{
+    height: 30%;
+}
+div#cilesiteTona div p {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+/*Footer*/
+footer{
+    display: flex;
+    min-height: 400px;
+    background-color:#069ca1 ;
+    padding: 30px;
+}
+div#rrjetetSociale{
+    margin:30px;
+    height: 350px;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+footer div#rrjetetSociale div {
+    margin: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+footer div div img{
+    width: 40px;
+    height: 40px;
+}
+footer div#rrjetetSociale div a{
+    text-decoration: none;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: black;
+}
+footer div#prenotimi{
+    margin: 30px;
+}
+footer div#prenotimi form{
+    margin: 20px;
+    padding: 20px;
+}
+table#tabelaPrenotimit{
+    border: 3px dotted black;
+
+}
+table#tabelaPrenotimit tr td{
+    padding: 20px;
+    font-size: 20px;
+}
+div#map{
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+    margin-top: 50px;
+}
+table#tabelaPrenotimit tr td input{
+    font-size: 20px;
+}
+div#prenotimi table label {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+@media only screen and (max-width: 1320px){
+    body{
+        overflow-x: hidden;
+    }
+    .title div{
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        margin-left: 20px;
+    }
+    .nav-links{
+        width: 70%;
+    }
+    .logo h4 {
+        display: none;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media only screen and (max-width: 810px){
+    .nav-links{
+    width: 100%;
+    }
+    .title div{
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        margin-left: 20px;
+    }
+    .title div h2{
+        text-align: end;
+    }
+    .zhdukTitullin{
+        display: none !important; /* Pa i ven !important nuk e ekzekutonte*/
+    }
+    div#PershkrimSherbim{
+        flex-direction: column;
+        align-items: center;
+    }
+    div#PershkrimSherbim .about, div#PershkrimSherbim #Riparimet{
+        width: 80%;
+    }
+    div#cilesiteTona{
+        display: flex !important;
+        flex-direction: column !important;
+    } 
+    div#cilesiteTona div {
+        margin: 20px;
+    }
+
+
+}
+@media only screen and (max-width: 590px){
+    /* Navigatori */
+    body{
+        overflow-x: hidden;
+    }
+    .logo h4{
+        display: none;
+    }
+    .nav-links{
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        width: 40%;
+        top: 9.9vh;
+        display: flex;
+        flex-direction: column;
+        background-color: #069ca1;
+        text-align: center;
+        justify-content: space-evenly;
+        transform: translateX(100%);
+        transition: 0.5s ease-in;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .burger{
+        display: block;
+        cursor: pointer;
+    }
+    .nav-active{
+        transform: translateX(0%);
+    }
+    @keyframes navLinksFade{
+        from{
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0px);
+        }
+
+}
+.toggle .line1{
+    transform: rotate(-45deg) ;
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-12px, -15px);
+}
+/*Fund Navigatori*/
+/*Foto e fillimit dhe slogani */
+.title div h1,.title div h2{
+    margin-left: 0px;
+    width: 60%;
+    font-weight: 1000;
+    padding-left: 0px;
+}
+.title div h1{
+    font-size: 45px;
+    padding-left: 15px;
+    padding-bottom: 20px;
+}
+.title div h2{
+    height: 200px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+.title div{
+    position: absolute;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    left: 0px;
+    margin-left: 20px;
+    padding-left: 0px;
+}
+/*Fundi i fotos se fillimit dhe sloganit*/
+/*Fillimi i about*/
+#Riparimet #RiparimLavatrice img, #Riparimet #RiparimFrigoriferi img, #Riparimet #RiparimLavastovilie img{
+    width: 70%;
+}
+/*Fillimi i cilesive */
+div#cilesiteTona{
+    display: flex !important;
+    flex-direction: column !important;
+    margin: 20px;
+}
+div#cilesiteTona div {
+    margin: 20px;
+}
+/*Fillimi  i footer*/
+footer div#rrjetetSociale div a{
+    font-size: 15px;
+}
+footer div#prenotimi {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+footer div#prenotimi form{
+    margin: 20px;
+    padding: 0px;
+}
+table#tabelaPrenotimit{
+    border: 3px dotted black;
+
+}
+table#tabelaPrenotimit tr td{
+    padding: 20px;
+    font-size: 16px;
+}
+table#tabelaPrenotimit tr td input{
+    font-size: 18px;
+}
+
+
+}
+@media only screen and (max-width: 480px){
+
+    div.title div h1{
+        font-size: 35px !important;
+        padding-left: 15px;
+        padding-bottom: 20px;
+    }
+    div.title div h2{
+        height: 200px;
+        font-size: 20px;
+        text-align: center;
+    
+    }
+
+}
